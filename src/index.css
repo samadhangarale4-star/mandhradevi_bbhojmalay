@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-marathi-heading {
+  font-family: 'Yatra One', 'Rozha One', 'Noto Sans Devanagari', serif;
+}
+
+.font-marathi-serif {
+  font-family: 'Playfair Display', 'Rozha One', 'Noto Sans Devanagari', serif;
+}
+
+.font-marathi {
+  font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Editorial Aesthetic Color Tokens */
+.bg-warm-canvas {
+  background-color: #FDFBF7;
+}
+
+.bg-editorial-dark {
+  background-color: #2D241E;
+}
+
+.bg-warm-card {
+  background-color: #FFFFFF;
+}
+
+.bg-warm-beige {
+  background-color: #F7F3EB;
+}
+
+.border-warm {
+  border-color: #E8E2D9;
+}
+
+.border-editorial {
+  border-color: #E8E2D9;
+}
+
+.text-charcoal {
+  color: #2D241E;
+}
+
+.text-editorial-muted {
+  color: #5C534D;
+}
+
+.text-saffron {
+  color: #F27D26;
+}
+
+.bg-saffron {
+  background-color: #F27D26;
+}
+
+.bg-saffron-hover:hover {
+  background-color: #D96A1C;
+}
+
+/* Warli and traditional geometric motif styling with editorial delicacy */
+.warli-pattern {
+  background-image: radial-gradient(#F27D26 0.75px, transparent 0.75px), radial-gradient(#2D241E 0.75px, #FDFBF7 0.75px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+

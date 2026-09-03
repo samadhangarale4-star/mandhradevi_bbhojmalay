@@ -1,0 +1,8 @@
+{
+  "name": "मांढरादेवी भोजनालय",
+  "description": "साताऱ्याच्या मातीतली अस्सल महाराष्ट्रीय चव - घरगुती चव, ताजे पदार्थ आणि आपुलकीची सेवा. पारंपरिक महाराष्ट्रीय भोजनालय, सातारा.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,473 @@
+import { MenuCategory, MenuItem, SpecialDish, MealStep, GalleryPhoto, Testimonial } from '../types';
+
+export const RESTAURANT_INFO = {
+  nameMr: 'मांढरादेवी भोजनालय',
+  nameEn: 'Mandhraadevi Bhojnalay',
+  tagline: 'साताऱ्याच्या मातीतली अस्सल महाराष्ट्रीय चव!',
+  subTagline: 'घरगुती चव, ताजे पदार्थ आणि मनापासून केलेली सेवा — आपल्या कुटुंबासोबत स्वादिष्ट जेवणाचा आनंद घ्या.',
+  locationShort: 'सातारा, महाराष्ट्र',
+  phonePlaceholder: '[फोन नंबर]',
+  addressPlaceholder: '[येथे अचूक पत्ता टाका]',
+  timingPlaceholder: '[उघडण्याची वेळ]',
+  whatsappPlaceholder: '[WhatsApp नंबर]',
+};
+
+export const QUICK_INFO_POINTS = [
+  { id: '1', title: 'अस्सल महाराष्ट्रीय जेवण', subtitle: 'गावरान मसाल्यांची जादू', icon: 'UtensilsCrossed' },
+  { id: '2', title: 'सातारा, महाराष्ट्र', subtitle: 'साताऱ्याची अस्सल ओळख', icon: 'MapPin' },
+  { id: '3', title: 'कुटुंबासाठी योग्य', subtitle: 'आनंददायी व स्वच्छ वातावरण', icon: 'Users' },
+  { id: '4', title: 'घरगुती चव', subtitle: 'आईच्या हातच्या जेवणाची आठवण', icon: 'Heart' },
+];
+
+export const ABOUT_PILLARS = [
+  {
+    id: 'pillar-1',
+    icon: 'CookingPot',
+    title: 'घरगुती चव',
+    description: 'आईच्या हातच्या जेवणाची आठवण करून देणारी चव.',
+    marathiNote: 'पारंपरिक पद्धतीने चुलीवर तयार केलेल्या पदार्थांची साधी आणि सोपी चव.',
+  },
+  {
+    id: 'pillar-2',
+    icon: 'Wheat',
+    title: 'ताजे साहित्य',
+    description: 'दर्जेदार आणि ताज्या साहित्यापासून तयार केलेले पदार्थ.',
+    marathiNote: 'साताऱ्याच्या परिसरातील शेतकऱ्यांकडून थेट आणलेली ज्वारी, बाजरी आणि ताजा भाजीपाला.',
+  },
+  {
+    id: 'pillar-3',
+    icon: 'HeartHandshake',
+    title: 'आपुलकीची सेवा',
+    description: 'प्रत्येक ग्राहकाला आपल्या माणसासारखी सेवा.',
+    marathiNote: 'जेवणाचा तृप्त करणारा आनंद आणि घरच्या पाहुण्यांसारखे आतिथ्य.',
+  },
+];
+
+export const TODAY_SPECIALS: SpecialDish[] = [
+  {
+    id: 'special-pithla-bhakri',
+    name: 'पिठलं-भाकरी',
+    marathiSubname: 'गरमागरम तव्यावरची ज्वारी भाकरी',
+    description: 'लसणीच्या खमंग फोडणीचे झणझणीत बेसन पिठलं, सोबत गरम ज्वारीची भाकरी, कांदा आणि लिंबू.',
+    pricePlaceholder: '₹ —',
+    tag: 'सर्वात लोकप्रिय',
+    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'special-bharli-vangi',
+    name: 'भरली वांगी',
+    marathiSubname: 'गावरान शेंगदाणा-खोबरे मसाला',
+    description: 'गावरान लहान वांगी, भाजलेले तीळ, शेंगदाणा आणि कांद्या-लसणाच्या काळ्या मसाल्यात शिजवलेली रसरशीत भाजी.',
+    pricePlaceholder: '₹ —',
+    tag: 'खास गावरान चव',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'special-matki-usal',
+    name: 'मटकी उसळ',
+    marathiSubname: 'मोड आलेली गावरान उसळ',
+    description: 'ताजी मोड आलेली मटकी, हळद-हिंग आणि साताऱ्याच्या खास मसाल्यात केलेली चविष्ट व पौष्टिक उसळ.',
+    pricePlaceholder: '₹ —',
+    tag: 'पौष्टिक व चवदार',
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'special-thecha',
+    name: 'झणझणीत ठेचा',
+    marathiSubname: 'खलबत्त्यातील हिरवा मिरची ठेचा',
+    description: 'तव्यावर भाजलेली तिखट हिरवी मिरची, लसूण, जिरं आणि शेंगदाणे खलबत्त्यात कुटून बनवलेला अस्सल ठेचा.',
+    pricePlaceholder: '₹ —',
+    tag: 'साताऱ्याचा झणझणीतपणा',
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'special-thali',
+    name: 'महाराष्ट्रीय थाळी',
+    marathiSubname: 'सणसणीत परिपूर्ण भोजन',
+    description: '२ भाकरी / चपाती, २ प्रकारच्या भाज्या, पिठलं किंवा उसळ, डाळ-भात, ठेचा, कांदा, लोणचं आणि थंडगार ताक.',
+    pricePlaceholder: '₹ —',
+    tag: 'संपूर्ण कुटुंब थाळी',
+    image: 'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'special-taak',
+    name: 'ताक',
+    marathiSubname: 'मसाला ताक / मठ्ठा',
+    description: 'घरच्या ताज्या दह्यापासून बनवलेले, जिरेपूड, कोथिंबीर, आल्याचा रस आणि सैंधव मीठ घातलेले पचनास उत्तम ताक.',
+    pricePlaceholder: '₹ —',
+    tag: 'थंडगार व तृप्तीदायक',
+    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80',
+  },
+];
+
+export const MENU_CATEGORIES: MenuCategory[] = [
+  { id: 'thali', name: 'थाळी', icon: 'Utensils' },
+  { id: 'bhaji', name: 'भाज्या', icon: 'Soup' },
+  { id: 'bhakri', name: 'भाकरी / पोळी', icon: 'CircleDot' },
+  { id: 'thecha', name: 'ठेचा / चटणी', icon: 'Flame' },
+  { id: 'bhat', name: 'भात', icon: 'Wheat' },
+  { id: 'drinks', name: 'पेये', icon: 'Coffee' },
+];
+
+export const MENU_ITEMS: MenuItem[] = [
+  // 🍛 थाळी
+  {
+    id: 'menu-thali-maha',
+    name: 'महाराष्ट्रीय थाळी',
+    description: 'ज्वारीची भाकरी (२) किंवा पोळी, भरली वांगी, पिठलं, खमंग आमटी, भात, हिरवा ठेचा, कांदा व ताक.',
+    category: 'thali',
+    pricePlaceholder: '₹ —',
+    tag: 'ग्राहक पसंती',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-thali-special',
+    name: 'स्पेशल थाळी',
+    description: 'भाकरी, २ मुख्य भाज्या (भरली वांगी + उसळ), स्पेशल पिठलं, पापड, गोड पदार्थ, मसाले भात, ठेचा व सोलकढी/ताक.',
+    category: 'thali',
+    pricePlaceholder: '₹ —',
+    tag: 'शाही मेजवानी',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-thali-sadhi',
+    name: 'साधी थाळी',
+    description: 'गरम भाकरी (२), दिवसाची रोजची भाजी, पातळ वरण किंवा आमटी, भात आणि घरगुती लोणचे.',
+    category: 'thali',
+    pricePlaceholder: '₹ —',
+    tag: 'रोजचे साधे जेवण',
+    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80',
+  },
+
+  // 🥘 भाज्या
+  {
+    id: 'menu-bhaji-vangi',
+    name: 'भरली वांगी',
+    description: 'कांद्या-लसणाच्या आणि भाजलेल्या खोबऱ्याच्या सुगंधी काळ्या मसाल्यात मऊ शिजलेली लहान वांगी.',
+    category: 'bhaji',
+    pricePlaceholder: '₹ —',
+    tag: 'स्वादिष्ट',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-bhaji-matki',
+    name: 'मटकी उसळ',
+    description: 'ताजी मोड आलेली गावरान मटकी, जिरं-मोहरीची फोडणी आणि साताऱ्याच्या पारंपरिक चवीत शिजवलेली.',
+    category: 'bhaji',
+    pricePlaceholder: '₹ —',
+    tag: 'गावरान उसळ',
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-bhaji-batata',
+    name: 'बटाटा भाजी',
+    description: 'हिरवी मिरची, कढीपत्ता, कोथिंबीर आणि हळदीच्या खमंग फोडणीत केलेली पिवळीधमक सुकी बटाटा भाजी.',
+    category: 'bhaji',
+    pricePlaceholder: '₹ —',
+    tag: 'खवय्यांची पसंती',
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-bhaji-palebhaji',
+    name: 'पालेभाजी',
+    description: 'साताऱ्याच्या शेतातील ताज्या मेथीची किंवा शेपूची लसूण आणि मुगाच्या डाळीसोबत केलेली खमंग भाजी.',
+    category: 'bhaji',
+    pricePlaceholder: '₹ —',
+    tag: 'ताजी हिरवीगार',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80',
+  },
+
+  // 🫓 भाकरी / पोळी
+  {
+    id: 'menu-bhakri-jowar',
+    name: 'ज्वारी भाकरी',
+    description: 'हाताने थापलेली, चुलीसारख्या तव्यावर भाजून खरपूस शेकलेली पांढरीशुभ्र ज्वारीची भाकरी.',
+    category: 'bhakri',
+    pricePlaceholder: '₹ —',
+    tag: 'ताजी तव्यावरची',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-bhakri-bajri',
+    name: 'बाजरी भाकरी',
+    description: 'हिवाळा आणि सर्व ऋतूंमध्ये आवडणारी, वरून पांढरे तीळ लावून खरपूस भाजलेली गरम बाजरीची भाकरी.',
+    category: 'bhakri',
+    pricePlaceholder: '₹ —',
+    tag: 'गावरान बाजरी',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-bhakri-poli',
+    name: 'पोळी (चपाती)',
+    description: 'गव्हाच्या पिठाची मऊ, लुसलुशीत घडीची पोळी, हलक्या तेलाची घडी घातलेली.',
+    category: 'bhakri',
+    pricePlaceholder: '₹ —',
+    tag: 'मऊ लुसलुशीत',
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80',
+  },
+
+  // 🌶️ ठेचा / चटणी
+  {
+    id: 'menu-thecha-green',
+    name: 'हिरवा ठेचा',
+    description: 'तीव्र तिखट हिरवी मिरची, भरपूर गावरान लसूण आणि मीठ खलबत्त्यात कुटून वरून गरम तेलाची धार.',
+    category: 'thecha',
+    pricePlaceholder: '₹ —',
+    tag: 'झणझणीत',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-thecha-red',
+    name: 'लाल ठेचा',
+    description: 'सुक्या लाल मिरच्या, लसूण आणि जिरे यांचा खरपूस ठेचा, भाकरीसोबत जिभेला पाणी आणणारा.',
+    category: 'thecha',
+    pricePlaceholder: '₹ —',
+    tag: 'अस्सल गावरान',
+    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-thecha-shengdana',
+    name: 'शेंगदाण्याची चटणी',
+    description: 'भाजलेले शेंगदाणे, लसूण, लाल तिखट आणि जिऱ्याची कोरडी खमंग साताऱ्याची चटणी.',
+    category: 'thecha',
+    pricePlaceholder: '₹ —',
+    tag: 'खमंग',
+    image: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80',
+  },
+
+  // 🍚 भात
+  {
+    id: 'menu-bhat-sadha',
+    name: 'साधा भात',
+    description: 'सुवासिक आंबेमोहोर किंवा इंद्रायणी तांदळाचा गरमागरम मऊ भात, वरून साजूक तूप आणि वरण.',
+    category: 'bhat',
+    pricePlaceholder: '₹ —',
+    tag: 'साजूक तुपाचा',
+    image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-bhat-masale',
+    name: 'मसाले भात',
+    description: 'महाराष्ट्राच्या सणासुदीची आठवण करून देणारा, खडा मसाला, काजू आणि भाज्यांचा सुगंधित मसाले भात.',
+    category: 'bhat',
+    pricePlaceholder: '₹ —',
+    tag: 'सुगंधी व मसालेदार',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
+  },
+
+  // 🥛 पेये
+  {
+    id: 'menu-drinks-taak',
+    name: 'ताक',
+    description: 'ताज्या घुसळलेल्या दह्याचे थंडगार मसालेदार ताक, वरून बारीक चिरलेली कोथिंबीर.',
+    category: 'drinks',
+    pricePlaceholder: '₹ —',
+    tag: 'पाचक व थंड',
+    isPopular: true,
+    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-drinks-solkadhi',
+    name: 'सोलकढी',
+    description: 'ताज्या नारळाचे दूध, आगूळ (कोकम), लसूण आणि हिरवी मिरची घालून बनवलेली पाचक सोलकढी.',
+    category: 'drinks',
+    pricePlaceholder: '₹ —',
+    tag: 'पारंपरिक कोकम',
+    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'menu-drinks-sarbat',
+    name: 'लिंबू सरबत',
+    description: 'ताज्या रसाळ लिंबाचा, जिरेपूड आणि सैंधव मीठ घातलेला पारंपरिक गारवा देणारा सरबत.',
+    category: 'drinks',
+    pricePlaceholder: '₹ —',
+    tag: 'उष्णतेवर गुणकारी',
+    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
+  },
+];
+
+export const MEAL_JOURNEY_STEPS: MealStep[] = [
+  {
+    stepNumber: 1,
+    name: 'भाकरी',
+    tagline: 'पांढरीशुभ्र गरम ज्वारीची भाकरी',
+    description: 'हाताने थापून तव्यावर खरपूस भाजलेली, मऊ आणि पोटभरीची अस्सल गावरान भाकरी.',
+    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    stepNumber: 2,
+    name: 'भाजी',
+    tagline: 'मसालेदार भरली वांगी किंवा उसळ',
+    description: 'घरच्या मसाल्यात शिजलेली रसरशीत भाजी, प्रत्येक घासाला महाराष्ट्राची चव देते.',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    stepNumber: 3,
+    name: 'पिठलं',
+    tagline: 'लसणीच्या फोडणीचं गरमागरम पिठलं',
+    description: 'भाकरीचा खरा जोडीदार! खमंग लसूण, हिरवी मिरची आणि कोथिंबिरीने सजलेले झणझणीत पिठलं.',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    stepNumber: 4,
+    name: 'ठेचा',
+    tagline: 'खलबत्त्यातला झणझणीत हिरवा ठेचा',
+    description: 'मिरची आणि लसणाचा गावरान ठेचा, ज्याशिवाय साताऱ्याचं जेवण अपूर्णच आहे.',
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    stepNumber: 5,
+    name: 'आमटी',
+    tagline: 'आंबट-गोड-तिखट सुगंधी आमटी',
+    description: 'तुरीच्या डाळीची फोडणी, कढीपत्ता आणि गोडा मसाल्याचा सुवास दरवळणारी मराठमोळी आमटी.',
+    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    stepNumber: 6,
+    name: 'भात',
+    tagline: 'साजूक तूप आणि गरमागरम भात',
+    description: 'सुगंधी तांदळाचा मऊ भात, त्यावर गरम डाळ आणि साजूक तुपाची धार, मनाला तृप्त करणारी.',
+    image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    stepNumber: 7,
+    name: 'ताक',
+    tagline: 'पचनासाठी थंडगार जिरे-मसाला ताक',
+    description: 'जेवणानंतर एक ग्लास थंडगार ताक, जे पोट शांत करते आणि तृप्तीची ढेकर आणते.',
+    image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=400&q=80',
+  },
+];
+
+export const WHY_CHOOSE_US_ITEMS = [
+  {
+    id: 'why-1',
+    icon: 'Star',
+    title: 'अस्सल महाराष्ट्रीय चव',
+    description: 'कोणतीही कृत्रिम चव नाही. केवळ पारंपरिक घरगुती मसाले आणि साताऱ्याची खरी चव.',
+  },
+  {
+    id: 'why-2',
+    icon: 'Salad',
+    title: 'ताजे आणि दर्जेदार पदार्थ',
+    description: 'दररोज सकाळी ताजे धान्य आणि स्थानिक शेतकऱ्यांचा भाजीपाला वापरून तयार केलेले पदार्थ.',
+  },
+  {
+    id: 'why-3',
+    icon: 'UsersRound',
+    title: 'कुटुंबासाठी योग्य',
+    description: 'शांत, स्वच्छ आणि कौटुंबिक वातावरण, जिथे आबालवृद्ध आनंदाने जेवू शकतात.',
+  },
+  {
+    id: 'why-4',
+    icon: 'HeartHandshake',
+    title: 'साताऱ्याची आपुलकी',
+    description: 'हसतमुखाने वाढले जाणारे सात्विक अन्न आणि घरच्या पाहुण्यांसारखे आदरपूर्वक केलेले आतिथ्य.',
+  },
+];
+
+export const GALLERY_PHOTOS: GalleryPhoto[] = [
+  {
+    id: 'gallery-thali',
+    title: 'अस्सल महाराष्ट्रीय थाळी',
+    category: 'थाळी',
+    image: 'https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=1000&q=80',
+    caption: 'भाकरी, पिठलं, भरली वांगी, ठेचा आणि ताकाने सजलेली परिपूर्ण थाळी.',
+  },
+  {
+    id: 'gallery-bhakri',
+    title: 'गरमागरम ज्वारीची भाकरी',
+    category: 'भाकरी',
+    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1000&q=80',
+    caption: 'हाताने थापून तव्यावर खरपूस भाजलेली पांढरीशुभ्र ज्वारीची भाकरी.',
+  },
+  {
+    id: 'gallery-pithla',
+    title: 'झणझणीत पिठलं',
+    category: 'खास पदार्थ',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=80',
+    caption: 'खमंग लसूण आणि हिरव्या मिरचीच्या फोडणीचे अस्सल पिठलं.',
+  },
+  {
+    id: 'gallery-thecha',
+    title: 'खलबत्त्यातील हिरवा ठेचा',
+    category: 'ठेचा',
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1000&q=80',
+    caption: 'गावरान मिरच्या आणि लसूण यांचा तव्यावर भाजून बनवलेला झणझणीत ठेचा.',
+  },
+  {
+    id: 'gallery-vangi',
+    title: 'गावरान भरली वांगी',
+    category: 'भाजी',
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80',
+    caption: 'शेंगदाणा आणि काळ्या मसाल्यात रसरशीत शिजवलेली भरली वांगी.',
+  },
+  {
+    id: 'gallery-exterior',
+    title: 'भोजनालय परिसर',
+    category: 'वातावरण',
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80',
+    caption: 'स्वच्छ, शांत आणि साताऱ्याच्या पारंपरिक संस्कृतीची झलक देणारा परिसर.',
+  },
+  {
+    id: 'gallery-interior',
+    title: 'बैठक व्यवस्था',
+    category: 'वातावरण',
+    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=80',
+    caption: 'कुटुंबासोबत आरामशीर बसून जेवणाचा आस्वाद घेण्यासाठी स्वच्छ बैठक व्यवस्था.',
+  },
+  {
+    id: 'gallery-prep',
+    title: 'पारंपरिक स्वयंपाक',
+    category: 'स्वयंपाकघर',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80',
+    caption: 'शुद्ध, स्वच्छ आणि पारंपरिक पद्धतीने दररोज ताजे अन्न तयार केले जाते.',
+  },
+  {
+    id: 'gallery-family',
+    title: 'कुटुंबाचा आनंद',
+    category: 'कौटुंबिक',
+    image: 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1000&q=80',
+    caption: 'आपल्या माणसांसोबत एकत्र बसून तृप्त जेवणाचा आनंद घेणारे समाधानी ग्राहक.',
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'rev-1',
+    name: 'सचिन',
+    location: 'सातारा',
+    rating: 5,
+    review: 'घरच्या जेवणासारखी चव! भाकरी आणि ठेचा खूपच छान.',
+    dateTag: 'नियमित ग्राहक (नमुना)',
+  },
+  {
+    id: 'rev-2',
+    name: 'प्रशांत',
+    location: 'पुणे (सातारा प्रवासी)',
+    rating: 5,
+    review: 'साताऱ्यात आलो की इथे जेवायला नक्की येतो. चव आणि सेवा दोन्ही उत्तम.',
+    dateTag: 'प्रवासी ग्राहक (नमुना)',
+  },
+  {
+    id: 'rev-3',
+    name: 'सुनीता',
+    location: 'सातारा',
+    rating: 5,
+    review: 'कुटुंबासोबत जेवण्यासाठी खूप छान ठिकाण. पिठलं-भाकरीची चव तर विसरताच येत नाही.',
+    dateTag: 'कौटुंबिक ग्राहक (नमुना)',
+  },
+  {
+    id: 'rev-4',
+    name: 'आनंद',
+    location: 'कराड',
+    rating: 5,
+    review: 'अस्सल गावरान चव आणि जेवण वाढणाऱ्यांची आपुलकी मन जिंकून घेते. भरली वांगी अप्रतिम!',
+    dateTag: 'नियमित ग्राहक (नमुना)',
+  },
+];
